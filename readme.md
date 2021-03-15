@@ -164,7 +164,7 @@ Check out the [Intermediate Mongo](https://gawdiseattle.gitbook.io/wdi/04-databa
 
 ## Turn It In!
 
-Put your terminal output (let's say the last 50 lines or so, not everything you ever did!) into the file in this directory called `answers.txt`. Commit and push your changes, then make a pull request against the base fork.
+> Put your terminal output (let's say the last 50 lines or so, not everything you ever did!) into the file in this directory called `answers.txt`. Commit and push your changes, then make a pull request against the base fork.
 
 Get your Mongo shell history with the following command: `tail -50 ~/.dbshell`
 
