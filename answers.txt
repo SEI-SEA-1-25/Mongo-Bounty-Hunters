@@ -1,1 +1,24 @@
 Please replace this text with ~50 lines of terminal history.
+1. db.bounties.find()
+2. db.bounties.find({"client": "Time Bureau"})
+3. db.bounties.find({captured: true})
+4. db.bounties.find({"name": "Brinn"})
+5. db.bounties.find({}, { name: 1 })
+6. db.bounties.remove({name: "Starbuck"})
+7. db.bounties.remove({name: "Han Solo"},{justOne: true})
+8. db.bounties.update({name: "Sara Lance"},{$set:{name: "White Canary"}})
+9. db.bounties.update({name: "Rocket"},{$set:{ship: "The Milano 2"}})
+10. db.bounties.find({"reward": {$gt: 100000}})
+11. db.bounties.find({"reward": {$lt: 100}})
+12. db.bounties.find({"reward": {$lte: 100}})
+13. db.bounties.find({hunters:{ $in["Nebula"]}})
+14. db.bounties.find({ $or: [ { ship: "Waverider"}, { ship: "Serenity" } ] } )
+15. db.bounties.find({client: "Ayesha High Priestess of the Sovereign", captured:false}).pretty()
+16. db.bounties.updateMany({}, { $inc: { reward: 333333 } })
+17. db.bounties.updateMany({}, { $mul: { reward: 2 } })
+18. db.bounties.update({name: "Malcolm Reynolds"}, {$push: {hunters:"Bobba Fett"}})
+19. db.bounties.update({ship: "Waverider"}, {$push: {hunters:"Bobba Fett"}})
+20. db.bounties.updateMany({},{$pull:{hunters:{$in:["Dengar"]}}})
+21. 
+
+
