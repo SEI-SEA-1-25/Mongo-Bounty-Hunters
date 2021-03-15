@@ -44,5 +44,5 @@ db.bounties.updateMany({} , { $pull: { hunters: { $in:[ "Dengar" ]}}})
 
 db.bounties.update({name: "Han Solo"}, { $set: {lastSeen: "yesterday" } }, { upsert: true } )
 
-db.bounties.updateMany({}, { $set: {lastSeen: "Last Week" } }, { upsert: true } )
+db.bounties.updateMany({name: {$ne: "Han Solo"}}, {$set: {lastSeen: "last week"}}, {upsert: true})
 
