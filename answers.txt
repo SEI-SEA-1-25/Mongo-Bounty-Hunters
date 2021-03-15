@@ -1,1 +1,105 @@
 Please replace this text with ~50 lines of terminal history.
+
+mongo
+
+use hunters
+
+db.bounties.find()
+
+db.bounties.insert([
+  {
+    name: 'Mariia',
+    wantedFor : 'do not following rules',
+    client : 'Nik',
+    reward : 900000,
+    ship: 'Minnies Minivan',
+    hunters :['3CPO'],
+    captured: false
+  }
+])
+
+db.bounties.find({client: "Time Bureau"})
+
+db.bounties.find({captured: true})
+
+db.bounties.find({name: "Mickey Mouse"})
+
+> db.bounties.find({name: {$exists: true}}, {name: 1})
+
+> db.bounties.findOneAndDelete({name: "Han Solo"})
+
+> db.bounties.update({name:'Sara Lances'}, {$set: {name: 'White Canary'}})
+
+> db.bounties.update({name:'Rockets'}, {$set: {ship: 'The Milano 2'}})
+
+> db.bounties.find({reward: {$gt: 100000}})
+
+> db.bounties.find({reward: {$lt: 1000}})
+
+> db.bounties.find({reward: {$lte: 1000}})
+
+> db.bounties.find({hunters: "Nebula"})
+
+> db.bounties.find({$or: [{ ship: "Waverider"}, {ship: "Serenity"}]})
+
+> db.bounties.updateMany({name: {$exists: true}}, {$inc: {reward: 333333}})
+
+> db.bounties.updateMany({name: {$exists: true}}, {$mul: {reward: 2}})
+
+
+db.bounties.update(
+    {
+        name: 'Malcolm Reynolds'
+    },
+    {
+        $push: {
+            hunters: 'Bobba Fett'
+        }
+    }
+)
+
+db.bounties.update(
+    {
+        ship: 'Waverider'
+    },
+    {
+        $push: {
+            hunters: 'Bobba Fett'
+        }
+    }
+)
+
+
+db.bounties.findOneAndDelete({name: "Dengar"})
+
+
+db.bounties.updateMany(
+    {
+        name: {$ne: 'Han Solo'}
+    },
+    {
+        $set: {
+            lastSeen: "yesterday"
+        }
+    },
+    {
+        upsert:true
+    }
+);
+
+
+db.bounties.updateMany(
+    {
+
+        name: {$ne: "Han Solo"}
+
+    },
+    {
+        $set: {
+            lastSeen: "last week"
+        }
+    },
+    {
+        upsert:true
+    }
+)
