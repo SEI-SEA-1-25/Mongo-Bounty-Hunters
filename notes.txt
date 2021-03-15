@@ -1,0 +1,15 @@
+db.bounties.updateMany(
+    {
+        
+        name: {$ne: "Han Solo"}
+        
+    },
+    {
+        $set: {
+            lastSeen: "last week"
+        }
+    },
+    {
+        upsert:true
+    }
+);
