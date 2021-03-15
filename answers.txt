@@ -1,1 +1,23 @@
-Please replace this text with ~50 lines of terminal history.
+db.bounties.find()
+db.bounties.find({client:"Time Bureau"})
+db.bounties.find({captured:true})
+db.bounties.find({name:"Starbuck"})
+> db.bounties.find({}, { _id: 0, name: 1 })
+db.bounties.remove({name:"Starbuck")}
+db.bounties.remove({id:1})
+db.bounties.update({name:"Sara Lance"},{$set:{name:"White Canary"}})
+ db.bounties.update({name:"Rocket"},{$set:{name:"The Milano 2"}})
+ db.bounties.find({reward:{$gt: 100000}})
+ db.bounties.find({reward:{$Lt: 1000}})
+ db.bounties.find({reward:{$lte: 1000}})
+
+
+ db.bounties.find({ reward: {$lte: 1000}})
+
+
+ db.bounties.find({hunters:"Nebula"})
+ db.bounties.find({ $or:[{ship:"Waverider"},{ship:"Serenity"}]})
+  db.bounties.find( {$and:[{captured:false},{client:"Ayesha High Priestess of the Sovereign"}]})
+  db.bounties.updateMany({},{$inc:{reward:333333}})
+  db.bounties.updateMany({},{$mul:{reward:2}})
+  db.bounties.update({name:"Malcolm Reynolds"},{$push:{hunters:"Bobba Fett"}})
