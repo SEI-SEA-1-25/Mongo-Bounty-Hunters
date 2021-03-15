@@ -72,6 +72,8 @@ db.bounties.update(
 
 db.bounties.findOneAndDelete({name: "Dengar"})
 
+db.bounties.updateMany({}, {$pull: {hunters: "Dengar"}})
+
 
 db.bounties.updateMany(
     {
