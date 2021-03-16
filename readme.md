@@ -156,6 +156,7 @@ Check out the [Intermediate Mongo](https://gawdiseattle.gitbook.io/wdi/04-databa
 - Increase all the bounties by 333333
 - Multiply all the bounties by 2
 - Add `Bobba Fett` as a hunter for `Malcolm Reynolds`
+
 - Add `Bobba Fett` as a hunter for the one that has the ship `Waverider`
 - Find and remove `Dengar` the bounty hunter
 - Upsert is used with update method which creates a new document if the query does not retrieve any documents matching the query parameters.
